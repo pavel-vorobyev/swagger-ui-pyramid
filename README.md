@@ -30,6 +30,9 @@ Only support Python3.
   ```python
   from swagger_ui import api_doc
   api_doc(app, config_path='./config/test.yaml', url_prefix='/api/doc', title='API doc')
+  
+  # Pyramid
+  api_doc(config, config_path='./config/test.yaml', url_prefix='/api/doc', title='API doc')
   ```
 
   Using config url, but need to suport [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
@@ -42,9 +45,6 @@ Only support Python3.
 
   ```python
   api_doc(app, config_path='./config/test.yaml', editor=True)
-  
-  # Pyramid
-  api_doc(config, config_path='./config/test.yaml', editor=True)
   ```
 
   And keep the old way
