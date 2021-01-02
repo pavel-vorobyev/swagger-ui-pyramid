@@ -1,4 +1,4 @@
-# swagger-ui-py
+# swagger-ui-pyramid
 Swagger UI for Python web framework, such Tornado, Flask, Quart, aiohttp, Sanic, Falcon and Pyramid.
 
 Only support Python3.
