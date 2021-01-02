@@ -162,6 +162,35 @@ class Interface(object):
         self._app.router.add_get(self._uri('/swagger.json'), swagger_config_handler)
         self._app.router.add_static(self._uri('/'), path='{}/'.format(self.static_dir))
 
+    def _pyramid_handler(self):
+        from pyramid.response import Response
+        from pyramid.view import view_config
+
+        interface = self
+
+        @view_config(renderer="html")
+        def docs_view(request):
+            return Response(interface.doc_html)
+
+        @view_config(renderer="html")
+        def docs_editor_view(request):
+            return Response(interface.editor_html)
+
+        @view_config(renderer="json")
+        def docs_config_view(request):
+            return Response(json.dumps(interface.get_config(request.host)))
+
+        self._app.add_route('docs', self._uri())
+        self._app.add_view(docs_view, route_name='docs')
+
+        self._app.add_route('editor', self._uri('/editor'))
+        self._app.add_view(docs_editor_view, route_name='editor')
+
+        self._app.add_route('config', self._uri('/swagger.json'))
+        self._app.add_view(docs_config_view, route_name='config')
+
+        self._app.add_static_view(name=self._uri(), path=self.static_dir)
+
     def _bottle_handler(self):
         from bottle import static_file, request
 
@@ -338,6 +367,13 @@ class Interface(object):
             from bottle import Bottle
             if isinstance(self._app, Bottle):
                 return self._bottle_handler()
+        except ImportError:
+            pass
+
+        try:
+            from pyramid.config import Configurator
+            if isinstance(self._app, Configurator):
+                return self._pyramid_handler()
         except ImportError:
             pass
 

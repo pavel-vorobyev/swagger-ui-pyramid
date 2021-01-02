@@ -1,0 +1,70 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="DuplicatedCode" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <Languages>
+        <language minSize="685" name="Python" />
+      </Languages>
+    </inspection_tool>
+    <inspection_tool class="PyBroadExceptionInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="23">
+            <item index="0" class="java.lang.String" itemvalue="sqlalchemy" />
+            <item index="1" class="java.lang.String" itemvalue="socketio" />
+            <item index="2" class="java.lang.String" itemvalue="zope" />
+            <item index="3" class="java.lang.String" itemvalue="tzlocal" />
+            <item index="4" class="java.lang.String" itemvalue="alembic" />
+            <item index="5" class="java.lang.String" itemvalue="six" />
+            <item index="6" class="java.lang.String" itemvalue="waitress" />
+            <item index="7" class="java.lang.String" itemvalue="python-engineio" />
+            <item index="8" class="java.lang.String" itemvalue="psycopg2-binary" />
+            <item index="9" class="java.lang.String" itemvalue="pyramid_jinja2" />
+            <item index="10" class="java.lang.String" itemvalue="marshmallow" />
+            <item index="11" class="java.lang.String" itemvalue="requests" />
+            <item index="12" class="java.lang.String" itemvalue="zope.sqlalchemy" />
+            <item index="13" class="java.lang.String" itemvalue="cornice" />
+            <item index="14" class="java.lang.String" itemvalue="bcrypt" />
+            <item index="15" class="java.lang.String" itemvalue="python-socketio" />
+            <item index="16" class="java.lang.String" itemvalue="eventlet" />
+            <item index="17" class="java.lang.String" itemvalue="pyramid" />
+            <item index="18" class="java.lang.String" itemvalue="apscheduler" />
+            <item index="19" class="java.lang.String" itemvalue="pyramid_debugtoolbar" />
+            <item index="20" class="java.lang.String" itemvalue="pyramid_tm" />
+            <item index="21" class="java.lang.String" itemvalue="pyjwt" />
+            <item index="22" class="java.lang.String" itemvalue="sqlalchemy-serializer" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E722" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N812" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="pinkkter_api.v1.model.conference.ConferenceParticipant.*" />
+          <option value="eventlet.wsgi" />
+          <option value="pinkkter_api.v1.model.reminder.ReminderParticipant.*" />
+          <option value="sqlalchemy.orm.scoping.scoped_session.commit" />
+          <option value="sqlalchemy.orm.scoping.scoped_session.*" />
+          <option value="str.*" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnusedLocalInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="TsLint" enabled="true" level="WARNING" enabled_by_default="true" />
+  </profile>
+</component>
